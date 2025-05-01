@@ -57,7 +57,7 @@ df.to_csv('universities.csv', index=False)
 print("📊 Reading and transforming the dataset...")
 df = pd.read_csv('universities.csv')
 
-df.rename(columns={'Distance / In-Person[a]': 'learning_mode'}, inplace=True)
+df.rename(columns={'Distance/In-Person[a]': 'learning_mode'}, inplace=True)
 
 df['learning_modes'] = np.where(
     (df['learning_mode'].str.lower().str.contains('distance')) &
